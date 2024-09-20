@@ -6,8 +6,8 @@
 #include "GameFramework/Character.h"
 #include "Carrier.generated.h"
 
-UENUM()
-enum class EActionType
+UENUM(BlueprintType)
+enum class EActionType : uint8
 {
     NoneActive,
     IsWaiting,
@@ -37,7 +37,7 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loader")
     AWarehouse* SourceWarehouse;  // Склад, с которого берёт грузчик
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loader") EActionType Action;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Loader") EActionType Action_Type;
 
     UFUNCTION(BlueprintCallable, Category = "Loader")
     void PickUpResource(AWarehouse* FromWarehouse);

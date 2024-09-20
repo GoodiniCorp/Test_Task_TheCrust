@@ -26,3 +26,8 @@ void AWarehouse::RemoveResource(int32 Amount)
     if (bIsActive && CurrentAmount - Amount >= 0)
         CurrentAmount -= Amount;
 }
+
+void AWarehouse::UpdateAmount(int32 amount)
+{
+    CurrentAmount = amount;
+}

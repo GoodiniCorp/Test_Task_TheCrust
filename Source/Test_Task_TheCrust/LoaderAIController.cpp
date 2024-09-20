@@ -44,6 +44,7 @@ void ALoaderAIController::FindNearestWarehouse()
             {
                 NearestWarehouse = Warehouse;
                 NearestDistance = Distance;
+                Carrier->TargetWarehouse = NearestWarehouse;
             }
         }
     }

@@ -6,7 +6,7 @@ ACarrier::ACarrier()
     CarriedAmount = 0;
     TargetWarehouse = nullptr;
     SourceWarehouse = nullptr;
-    Action = EActionType::NoneActive;
+    Action_Type = EActionType::NoneActive;
 }
 
 void ACarrier::BeginPlay()
